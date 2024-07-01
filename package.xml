@@ -1,0 +1,20 @@
+<package format="2">
+  <name>live-pose</name>
+  <version>0.0.0</version>
+  <description>The pose_vis_publisher package</description>
+
+  <maintainer email="kaivalyashah192@gmail.com">Kaivalya Shah</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+
+</package>
