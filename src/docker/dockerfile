@@ -59,9 +59,6 @@ RUN conda activate my && \
     pip install scikit-image meshcat webdataset omegaconf pypng roma seaborn opencv-contrib-python openpyxl wandb imgaug Ninja xlsxwriter timm albumentations xatlas rtree nodejs jupyterlab objaverse g4f ultralytics==8.0.120 pycocotools videoio numba && \
     conda install -y -c anaconda h5py
 
-# Set shell to bash
-ENV SHELL=/bin/bash
-RUN ln -sf /bin/bash /bin/sh
 
 # Install ROS Noetic
 RUN apt-get update && apt-get install -y lsb-release curl && \
@@ -74,3 +71,6 @@ RUN apt-get update && apt-get install -y lsb-release curl && \
     source ~/.bashrc && \
     rosdep init && \
     rosdep update
+
+ENV SHELL=/bin/bash
+RUN ln -sf /bin/bash /bin/sh
