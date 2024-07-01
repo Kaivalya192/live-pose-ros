@@ -63,3 +63,9 @@ RUN conda activate my && \
 ENV SHELL=/bin/bash
 RUN ln -sf /bin/bash /bin/sh
 
+#install ros-neotic
+RUN apt-get update && apt-get install -y lsb-release
+RUN wget -c https://raw.githubusercontent.com/qboticslabs/ros_install_noetic/master/ros_install_noetic.sh
+RUN chmod +x ros_install_noetic.sh
+#set non iteractive and run bash
+RUN EXPORT DEBIAN_FRONTEND=noninteractive && ./ros_install_noetic.sh
